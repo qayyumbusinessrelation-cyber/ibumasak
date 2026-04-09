@@ -985,7 +985,7 @@
   <div class="pricing-inner fade-up">
     <div class="section-label">Harga</div>
     <h2>Murah dari belanja dapur sehari</h2>
-    <p class="pricing-sub">RM1 sebulan. Tak ada iklan. Tak ada data dijual. Ibu setia dengan anak je.</p>
+    <p class="pricing-sub">RM1 sebulan + RM1 caj pemprosesan. Tak ada iklan. Tak ada data dijual. Ibu setia dengan anak je.</p>
     <div class="price-cards">
       <div class="price-card">
         <div class="amount">RM0 <span>/ bulan</span></div>
@@ -1014,6 +1014,7 @@
       </div>
     </div>
     <p style="margin-top:1.5rem;font-size:.82rem;color:var(--ink-muted)">Bayar via FPX · Touch 'n Go · Kad kredit/debit · Batal bila-bila masa</p>
+    <p style="margin-top:.5rem;font-size:.78rem;color:var(--ink-muted)">* Jumlah sebenar RM2 — RM1 untuk Ibumasak, RM1 caj pemprosesan ToyyibPay.</p>
   </div>
 </section>
 
@@ -1295,7 +1296,7 @@ HAD IBU:
     if (!overlay) return;
     overlay.innerHTML = `
       <h4>Dah log masuk! Langgan sekarang 😊</h4>
-      <p>Hanya <strong>RM1 sebulan</strong> — murah dari santan sekotak. Tanya Ibu tanpa had.</p>
+      <p>Hanya <strong>RM1 sebulan</strong> (+ RM1 caj pemprosesan) — murah dari santan sekotak. Tanya Ibu tanpa had.</p>
       <div class="paywall-btn-row">
         <button class="unlock-btn" onclick="goToPayment()">
           Bayar RM1 Sekarang ✦
@@ -1395,9 +1396,9 @@ HAD IBU:
       // Logged in but not subscribed → go straight to payment
       overlay.innerHTML = `
         <h4>Anak nak terus tanya Ibu? 😊</h4>
-        <p>20 soalan percuma dah habis. Langgan <strong>RM1 sebulan</strong> untuk tanya tanpa had — murah dari beli santan sekotak.</p>
+        <p>20 soalan percuma dah habis. Langgan <strong>RM1 sebulan</strong> (+ RM1 caj pemprosesan) untuk tanya tanpa had — murah dari beli santan sekotak.</p>
         <div class="paywall-btn-row">
-          <button class="unlock-btn" onclick="goToPayment()">Bayar RM1 Sekarang ✦</button>
+          <button class="unlock-btn" onclick="goToPayment()">Bayar RM2 Sekarang ✦</button>
         </div>
         <span class="skip-link" onclick="grantExtraMessages()">Nak cuba 5 soalan lagi dulu →</span>
       `;
@@ -1405,7 +1406,7 @@ HAD IBU:
       // Not logged in → ask to log in first
       overlay.innerHTML = `
         <h4>Anak nak terus tanya Ibu? 😊</h4>
-        <p>20 soalan percuma dah habis. Log masuk dulu — lepas tu langgan <strong>RM1 sebulan</strong> untuk tanya tanpa had.</p>
+        <p>20 soalan percuma dah habis. Log masuk dulu — lepas tu langgan <strong>RM1 sebulan</strong> (+ RM1 caj pemprosesan) untuk tanya tanpa had.</p>
         <div class="paywall-btn-row">
           <button class="login-btn" onclick="openLoginModal()">🔑 Log Masuk</button>
           <button class="unlock-btn" onclick="openLoginModal()">Langgan RM1/bulan ✦</button>
