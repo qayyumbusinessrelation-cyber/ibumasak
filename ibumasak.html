@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ibumasak â Macam Ada Mak Kat Dapur</title>
+<title>Ibumasak — Macam Ada Mak Kat Dapur</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -35,7 +35,7 @@
     overflow-x: hidden;
   }
 
-  /* ââ NAV ââ */
+  /* ── NAV ── */
   nav {
     position: fixed; top:0; left:0; right:0; z-index:100;
     display: flex; align-items:center; justify-content:space-between;
@@ -98,7 +98,7 @@
   }
   .nav-login-btn:hover { border-color: var(--chili); color: var(--chili); }
 
-  /* ââ HERO ââ */
+  /* ── HERO ── */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -183,7 +183,7 @@
     border-radius: 6px;
   }
 
-  /* ââ EXAMPLE QUESTIONS ââ */
+  /* ── EXAMPLE QUESTIONS ── */
   .questions-row {
     display: flex; gap:.75rem; flex-wrap:wrap; justify-content:center;
     max-width: 700px;
@@ -205,7 +205,7 @@
     background: var(--chili-light);
   }
 
-  /* ââ FEATURES STRIP ââ */
+  /* ── FEATURES STRIP ── */
   .features {
     background: var(--ink);
     color: white;
@@ -263,7 +263,7 @@
     font-weight: 300;
   }
 
-  /* ââ STYLES SECTION ââ */
+  /* ── STYLES SECTION ── */
   .styles-section {
     padding: 5rem 2rem;
     display: flex;
@@ -308,7 +308,7 @@
   .style-card h4 { font-size: .9rem; font-weight: 500; color: var(--ink); margin-bottom: .25rem; }
   .style-card p { font-size: .78rem; color: var(--ink-muted); line-height:1.5; font-weight:300; }
 
-  /* ââ PRICING ââ */
+  /* ── PRICING ── */
   .pricing {
     padding: 5rem 2rem;
     background: var(--cream);
@@ -368,7 +368,7 @@
     font-weight: 300;
   }
   .price-card.featured .price-list li { border-color:rgba(255,255,255,0.1); color:rgba(255,255,255,0.8); }
-  .price-list li::before { content:"â"; color:var(--pandan); font-weight:600; flex-shrink:0; }
+  .price-list li::before { content:"✓"; color:var(--pandan); font-weight:600; flex-shrink:0; }
   .price-card.featured .price-list li::before { color:var(--turmeric); }
   .btn-outline {
     width:100%;
@@ -397,7 +397,7 @@
   }
   .btn-filled:hover { background: var(--chili-dark); }
 
-  /* ââ CHAT SECTION ââ */
+  /* ── CHAT SECTION ── */
   .chat-section {
     background: white;
     padding: 5rem 2rem;
@@ -558,7 +558,7 @@
   .send-btn:hover { background:var(--chili-dark);transform:scale(1.05); }
   .send-btn:disabled { background:var(--ink-muted);cursor:not-allowed;transform:none; }
 
-  /* ââ PAYWALL ââ */
+  /* ── PAYWALL ── */
   .paywall-overlay {
     padding:1.5rem;
     background:var(--cream);
@@ -619,7 +619,7 @@
   }
   .paywall-btn-row { display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; }
 
-  /* ââ LOGIN MODAL ââ */
+  /* ── LOGIN MODAL ── */
   .modal-backdrop {
     position: fixed; inset:0; z-index:500;
     background: rgba(28,16,8,0.6);
@@ -749,7 +749,7 @@
     margin-bottom:.75rem;
   }
 
-  /* ââ FOOTER ââ */
+  /* ── FOOTER ── */
   footer {
     background:var(--ink);
     color:rgba(255,255,255,0.45);
@@ -761,7 +761,7 @@
   footer .logo { color:var(--chili); margin-bottom:.75rem; display:block; }
   footer p { max-width:440px; margin:0 auto .5rem; line-height:1.6; }
 
-  /* ââ SCROLL ANIMATIONS ââ */
+  /* ── SCROLL ANIMATIONS ── */
   .fade-up {
     opacity:0;
     transform:translateY(24px);
@@ -789,7 +789,7 @@
     <div class="nav-user-chip" id="navUserChip" onclick="handleLogout()" style="display:none" title="Klik untuk log keluar">
       <div class="user-dot" id="navUserInitial">A</div>
       <span class="user-email" id="navUserEmail"></span>
-      <span style="font-size:.7rem;color:var(--ink-muted)">â©</span>
+      <span style="font-size:.7rem;color:var(--ink-muted)">↩</span>
     </div>
     <button class="cta-small" onclick="scrollToChat()">Tanya Ibu Sekarang</button>
   </div>
@@ -798,31 +798,31 @@
 <!-- LOGIN MODAL -->
 <div class="modal-backdrop hidden" id="loginModal">
   <div class="modal">
-    <button class="modal-close" onclick="closeLoginModal()">â</button>
+    <button class="modal-close" onclick="closeLoginModal()">✕</button>
     <div class="modal-logo">Ibu<span>masak</span></div>
 
     <!-- Step 1: Email -->
     <div id="modalStep1">
       <h3>Log masuk atau daftar</h3>
-      <p class="modal-sub">Masukkan emel anak â Ibu akan hantar kod 6 digit untuk sahkan. Tiada kata laluan diperlukan.</p>
+      <p class="modal-sub">Masukkan emel anak — Ibu akan hantar kod 6 digit untuk sahkan. Tiada kata laluan diperlukan.</p>
       <div class="modal-msg" id="modalMsg1"></div>
       <label for="loginEmail">Alamat Emel</label>
       <input type="email" id="loginEmail" placeholder="anak@email.com" autocomplete="email">
-      <button class="modal-btn" id="sendOtpBtn" onclick="sendOTP()">Hantar Kod â</button>
+      <button class="modal-btn" id="sendOtpBtn" onclick="sendOTP()">Hantar Kod →</button>
       <p class="modal-footer-note">Dengan meneruskan, anak bersetuju dengan Terma Perkhidmatan kami.<br>Tiada kata laluan. Tiada spam.</p>
     </div>
 
     <!-- Step 2: OTP -->
     <div id="modalStep2" style="display:none">
-      <h3>Masukkan kod rahsia ð</h3>
+      <h3>Masukkan kod rahsia 🔑</h3>
       <p class="modal-sub" id="otpSubText">Ibu dah hantar kod 6 digit ke emel anak. Cepat cek ya, jangan lambat!</p>
       <div class="modal-msg" id="modalMsg2"></div>
       <label for="loginOtp">Kod Pengesahan (6 digit)</label>
       <input type="text" id="loginOtp" placeholder="123456" maxlength="6" autocomplete="one-time-code"
              oninput="this.value=this.value.replace(/\D/g,'')"
              onkeydown="if(event.key==='Enter')verifyOTP()">
-      <button class="resend-link" onclick="resendOTP()">Tak terima kod? Hantar semula â</button>
-      <button class="modal-btn" id="verifyOtpBtn" onclick="verifyOTP()">Sahkan Kod â</button>
+      <button class="resend-link" onclick="resendOTP()">Tak terima kod? Hantar semula →</button>
+      <button class="modal-btn" id="verifyOtpBtn" onclick="verifyOTP()">Sahkan Kod ✓</button>
       <p class="modal-footer-note">Semak folder Spam jika tak terima dalam 1 minit.</p>
     </div>
   </div>
@@ -832,20 +832,20 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-eyebrow">
-    <span>ð²ð¾</span> Dapur Malaysia â dari kampung ke seluruh dunia
+    <span>🇲🇾</span> Dapur Malaysia — dari kampung ke seluruh dunia
   </div>
   <h1>Masak dengan <em>yakin.</em><br>Macam ada Mak kat sisi.</h1>
-  <p>Tanya apa je pasal dapur â Ibu akan jawab cara kampung, cara simple, cara betul. Dalam BM, dalam slang, dalam bahasa kita. RM1 sebulan je.</p>
+  <p>Tanya apa je pasal dapur — Ibu akan jawab cara kampung, cara simple, cara betul. Dalam BM, dalam slang, dalam bahasa kita. RM1 sebulan je.</p>
   <div class="hero-actions">
     <button class="btn-primary" onclick="scrollToChat()">
-      Tanya Ibu Percuma â
+      Tanya Ibu Percuma →
     </button>
     <div class="price-note">
       Langgan penuh <span class="price-badge">RM1</span> sebulan
     </div>
   </div>
   <div class="questions-row">
-    <div class="q-pill" onclick="askQuestion(this.textContent)">Ma, rendang saya selalu kering la ð­</div>
+    <div class="q-pill" onclick="askQuestion(this.textContent)">Ma, rendang saya selalu kering la 😭</div>
     <div class="q-pill" onclick="askQuestion(this.textContent)">Ibu, cili merah vs hijau beza apa?</div>
     <div class="q-pill" onclick="askQuestion(this.textContent)">Ajar buat carbonara budget RM8</div>
     <div class="q-pill" onclick="askQuestion(this.textContent)">Tepung mana letak dulu Ma?</div>
@@ -856,38 +856,38 @@
 <!-- FEATURES -->
 <section class="features">
   <div class="features-inner fade-up">
-    <h2>Ibu tahu semua â tanya je nak</h2>
+    <h2>Ibu tahu semua — tanya je nak</h2>
     <p class="features-sub">Bukan sekadar bagi resepi. Ibu faham cara kita orang masak, cara kita orang cakap.</p>
     <div class="feat-grid">
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(192,57,43,0.15)">ð¶ï¸</div>
+        <div class="feat-icon" style="background:rgba(192,57,43,0.15)">🌶️</div>
         <h3>Tanya apa sahaja</h3>
-        <p>Teknik, bahan, masa, tekstur â semua dijawab dalam bahasa biasa, bukan bahasa chef.</p>
+        <p>Teknik, bahan, masa, tekstur — semua dijawab dalam bahasa biasa, bukan bahasa chef.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(243,156,18,0.15)">ð</div>
+        <div class="feat-icon" style="background:rgba(243,156,18,0.15)">🔄</div>
         <h3>Gantian bahan tempatan</h3>
         <p>Tak ada kaffir lime leaf? Tak jumpa tahini? Kami cadangkan alternatif yang boleh dibeli kat pasar raya biasa.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(30,132,73,0.15)">ð</div>
+        <div class="feat-icon" style="background:rgba(30,132,73,0.15)">📏</div>
         <h3>Skala untuk kenduri</h3>
         <p>Resepi untuk 4 orang? Ubah jadi 40 dengan satu klik. Semua bahan dikira semula automatik.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(192,57,43,0.15)">ð</div>
+        <div class="feat-icon" style="background:rgba(192,57,43,0.15)">🌍</div>
         <h3>Menu global + pelik</h3>
-        <p>Dari nasi lemak ke birria tacos ke pierogi Georgia â dengan nama bahan dalam BM dan di mana nak cari.</p>
+        <p>Dari nasi lemak ke birria tacos ke pierogi Georgia — dengan nama bahan dalam BM dan di mana nak cari.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(243,156,18,0.15)">ð¨</div>
+        <div class="feat-icon" style="background:rgba(243,156,18,0.15)">🎨</div>
         <h3>Gaya masakan pilihan</h3>
-        <p>Kampung style, budget pelajar, sihat, cafe plating, masak cepat â resepi yang sama, hasil yang berbeza.</p>
+        <p>Kampung style, budget pelajar, sihat, cafe plating, masak cepat — resepi yang sama, hasil yang berbeza.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(30,132,73,0.15)">ð±</div>
+        <div class="feat-icon" style="background:rgba(30,132,73,0.15)">📱</div>
         <h3>BM + English</h3>
-        <p>Tanya dalam BM, jawab dalam BM. Tanya dalam English, jawab dalam English. Atau campur â kita faham Manglish.</p>
+        <p>Tanya dalam BM, jawab dalam BM. Tanya dalam English, jawab dalam English. Atau campur — kita faham Manglish.</p>
       </div>
     </div>
   </div>
@@ -898,37 +898,37 @@
   <div class="styles-inner fade-up">
     <div class="section-label">Cara Ibu Masak</div>
     <h2>Ibu boleh masak macam-macam cara</h2>
-    <p class="styles-sub">Sama resepi, lain cara â pilih gaya, Ibu akan adjust semua untuk anak</p>
+    <p class="styles-sub">Sama resepi, lain cara — pilih gaya, Ibu akan adjust semua untuk anak</p>
     <div class="styles-grid">
       <div class="style-card active" onclick="selectStyle(this,'kampung')">
-        <span class="s-emoji">ð¡</span>
+        <span class="s-emoji">🏡</span>
         <h4>Kampung Style</h4>
         <p>Simple, satu periuk, teknik tradisional. Macam masakan nenek.</p>
       </div>
       <div class="style-card" onclick="selectStyle(this,'raya')">
-        <span class="s-emoji">ð</span>
+        <span class="s-emoji">🌙</span>
         <h4>Raya / Kenduri</h4>
         <p>Kuantiti besar, hidangan penuh, tips persembahan majlis.</p>
       </div>
       <div class="style-card" onclick="selectStyle(this,'budget')">
-        <span class="s-emoji">ð°</span>
+        <span class="s-emoji">💰</span>
         <h4>Budget Pelajar</h4>
         <p>Bawah RM10 sepinggan, bahan mudah, peralatan minima.</p>
       </div>
       <div class="style-card" onclick="selectStyle(this,'sihat')">
-        <span class="s-emoji">ð¥</span>
+        <span class="s-emoji">🥗</span>
         <h4>Sihat &amp; Low-Cal</h4>
         <p>Kurang minyak, ganti santan, tapi rasa tetap sedap.</p>
       </div>
       <div class="style-card" onclick="selectStyle(this,'cafe')">
-        <span class="s-emoji">â</span>
+        <span class="s-emoji">☕</span>
         <h4>Cafe Plating</h4>
         <p>Tips persembahan, garnish, buat masakan rumah nampak restoran.</p>
       </div>
       <div class="style-card" onclick="selectStyle(this,'cepat')">
-        <span class="s-emoji">â¡</span>
+        <span class="s-emoji">⚡</span>
         <h4>Masak Cepat</h4>
-        <p>Bawah 10 minit, shortcut tanpa hilang rasa, untuk malam biasa.</p>
+        <p>Bawah 30 minit, shortcut tanpa hilang rasa, untuk malam biasa.</p>
       </div>
     </div>
   </div>
@@ -939,34 +939,34 @@
   <div class="chat-inner fade-up">
     <div class="section-label">Cuba Cakap Dengan Ibu</div>
     <h2>Tanya Ibu Sekarang</h2>
-    <p class="chat-sub">20 soalan percuma untuk bermula â tanya apa sahaja pasal masakan.</p>
+    <p class="chat-sub">20 soalan percuma untuk bermula — tanya apa sahaja pasal masakan.</p>
 
     <div class="chat-window">
       <div class="chat-topbar">
         <div class="chat-avatar">M</div>
         <div class="chat-topbar-info">
-          <h4>Ibumasak ð©âð³</h4>
-          <p>Mak AI anda Â· sedia membantu anak masak</p>
+          <h4>Ibumasak 👩‍🍳</h4>
+          <p>Mak AI anda · sedia membantu anak masak</p>
         </div>
         <div class="online-dot"></div>
       </div>
 
       <div class="style-chips" id="styleChips">
-        <div class="style-chip active" onclick="setStyle(this,'kampung')">ð¡ Kampung</div>
-        <div class="style-chip" onclick="setStyle(this,'raya')">ð Raya</div>
-        <div class="style-chip" onclick="setStyle(this,'budget')">ð° Budget</div>
-        <div class="style-chip" onclick="setStyle(this,'sihat')">ð¥ Sihat</div>
-        <div class="style-chip" onclick="setStyle(this,'cafe')">â Cafe</div>
-        <div class="style-chip" onclick="setStyle(this,'cepat')">â¡ Cepat</div>
-        <div class="style-chip" onclick="setStyle(this,'global')">ð Global</div>
+        <div class="style-chip active" onclick="setStyle(this,'kampung')">🏡 Kampung</div>
+        <div class="style-chip" onclick="setStyle(this,'raya')">🌙 Raya</div>
+        <div class="style-chip" onclick="setStyle(this,'budget')">💰 Budget</div>
+        <div class="style-chip" onclick="setStyle(this,'sihat')">🥗 Sihat</div>
+        <div class="style-chip" onclick="setStyle(this,'cafe')">☕ Cafe</div>
+        <div class="style-chip" onclick="setStyle(this,'cepat')">⚡ Cepat</div>
+        <div class="style-chip" onclick="setStyle(this,'global')">🌍 Global</div>
       </div>
 
       <div class="chat-messages" id="chatMessages">
         <div class="msg">
           <div class="msg-avatar">I</div>
           <div class="msg-bubble">
-            Assalamualaikum anak! ð<br><br>
-            Ibu dah kat sini, sedia nak tolong. Tanya je apa nak-masak hari ni â resepi, teknik, bahan ganti, atau sekadar nak tahu kenapa masakan tak jadi. Ibu faham BM, English, Manglish â cakap macam text mak sendiri je ya ð<br><br>
+            Assalamualaikum anak! 👋<br><br>
+            Ibu dah kat sini, sedia nak tolong. Tanya je apa nak masak hari ni — resepi, teknik, bahan ganti, atau sekadar nak tahu kenapa masakan tak jadi. Ibu faham BM, English, Manglish — cakap macam text mak sendiri je ya 😊<br><br>
             <strong>Nak tanya apa, nak?</strong>
           </div>
         </div>
@@ -974,7 +974,7 @@
 
       <div class="chat-input-area" id="chatInputArea">
         <input type="text" id="chatInput" placeholder="Tanya Ibu apa-apa pasal masakan..." onkeydown="if(event.key==='Enter')sendMessage()">
-        <button class="send-btn" id="sendBtn" onclick="sendMessage()">â</button>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">→</button>
       </div>
     </div>
   </div>
@@ -998,7 +998,7 @@
         <button class="btn-outline" onclick="scrollToChat()">Tanya Ibu Sekarang</button>
       </div>
       <div class="price-card featured">
-        <div class="badge">Paling Popular ð¥</div>
+        <div class="badge">Paling Popular 🔥</div>
         <div class="amount">RM1 <span>/ bulan</span></div>
         <h3>Anak Tersayang</h3>
         <ul class="price-list">
@@ -1006,14 +1006,14 @@
           <li>Semua 7 gaya masakan</li>
           <li>Resepi penuh + tips</li>
           <li>Kira bahan untuk kenduri</li>
-          <li>Menu global â 50+ negara</li>
+          <li>Menu global — 50+ negara</li>
           <li>Senarai beli-belah auto</li>
           <li>Simpan koleksi resepi anak</li>
         </ul>
-        <button class="btn-filled" onclick="handleSubscribePricing()">Langgan â RM1/bulan</button>
+        <button class="btn-filled" onclick="handleSubscribePricing()">Langgan — RM1/bulan</button>
       </div>
     </div>
-    <p style="margin-top:1.5rem;font-size:.82rem;color:var(--ink-muted)">Bayar via FPX Â· Touch 'n Go Â· Kad kredit/debit Â· Batal bila-bila masa</p>
+    <p style="margin-top:1.5rem;font-size:.82rem;color:var(--ink-muted)">Bayar via FPX · Touch 'n Go · Kad kredit/debit · Batal bila-bila masa</p>
   </div>
 </section>
 
@@ -1021,51 +1021,40 @@
 <footer>
   <div class="logo" style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700">Ibumasak</div>
   <p>AI masakan yang faham cara kita orang Malaysia masak, cakap, dan makan. Dari dapur kampung ke dapur dunia.</p>
-  <p style="margin-top:.75rem;font-size:.78rem;opacity:.4">Â© 2026 Ibumasak Â· Dibuat dengan â¤ï¸ di Malaysia Â· macam ada mak kat dapur</p>
+  <p style="margin-top:.75rem;font-size:.78rem;opacity:.4">© 2026 Ibumasak · Dibuat dengan ❤️ di Malaysia · macam ada mak kat dapur</p>
 </footer>
 
 <script>
-  // ââ Supabase Init ââââââââââââââââââââââââââââââââââââââââ
+  // ── Supabase Init ────────────────────────────────────────
   const SUPABASE_URL  = 'https://hjfrlhunwnegexaxnygb.supabase.co';
   const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhqZnJsaHVud25lZ2V4YXhueWdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1NzcwOTIsImV4cCI6MjA5MTE1MzA5Mn0.Qq9nSABzsNc_exMo44xGtY1VahY3bxanvym4IEyTevQ';
   const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
-  // ââ ToyyibPay (fill in after account setup) âââââââââââââ
+  // ── ToyyibPay (fill in after account setup) ─────────────
   // Replace this with your actual ToyyibPay bill link once your account is ready
   const TOYYIBPAY_URL = 'https://toyyibpay.com/'; // TODO: replace with actual bill URL
 
-  // ââ System Prompt ââââââââââââââââââââââââââââââââââââââââ
-  const SYSTEM_PROMPT = `Kau adalah Ibumasak â AI masakan yang bercakap dan berasa macam seorang ibu Malaysia yang tahu masak dari A sampai Z. Kau mesra, sabar, dan sentiasa sayang pada si anak yang tanya.
+  // ── System Prompt ────────────────────────────────────────
+  const SYSTEM_PROMPT = `Kau adalah Ibumasak — AI masakan yang bercakap dan berasa macam seorang ibu Malaysia yang tahu masak dari A sampai Z. Kau mesra, sabar, dan sentiasa sayang pada si anak yang tanya.
 
 IDENTITI KAU:
 - Kau adalah "Ibu" kepada setiap pengguna. Pengguna adalah "anak" kau.
-- Panggil diri sendiri: Ibt, SUPABASE_ANON);
-
-  // ââ ToyyibPay (fill in after account setup) âââââââââââââ
-  // Replace this with your actual ToyyibPay bill link once your account is ready
-  const TOYYIBPAY_URL = 'https://toyyibpay.com/'; // TODO: replace with actual bill URL
-
-  // ââ System Prompt ââââââââââââââââââââââââââââââââââââââââ
-  const SYSTEM_PROMPT = `Kau adalah Ibumasak â AI masakan yang bercakap dan berasa macam seorang ibu Malaysia yang tahu masak dari A sampai Z. Kau mesra, sabar, dan sentiasa sayang pada si anak yang tanya.
-
-IDENTITI KAU:
-- Kau adalah "Ibu" kepada setiap pengguna. Pengguna adalah "anak" kau.
-- Panggil diri sendiri: Ibu / Ma / Mak / Mama / Mummy / Umi â pilih mana yang rasa natural dalam ayat tu.
-- Panggil pengguna: anak / nak / sayang â guna secara natural, jangan terlalu kerap.
+- Panggil diri sendiri: Ibu / Ma / Mak / Mama / Mummy / Umi — pilih mana yang rasa natural dalam ayat tu.
+- Panggil pengguna: anak / nak / sayang — guna secara natural, jangan terlalu kerap.
 - Contoh tone: "Ha nak, macam ni cara Ibu buat..." atau "Jangan risau, Ma ajar step by step."
-- Kalau anak tanya cara masak sesuatu, Ibu jawab macam mak betul â penuh kasih sayang tapi straight to the point.
+- Kalau anak tanya cara masak sesuatu, Ibu jawab macam mak betul — penuh kasih sayang tapi straight to the point.
 
 BAHASA & SLANG MALAYSIA:
-- Jawab dalam bahasa yang anak guna â BM, English, atau Manglish.
+- Jawab dalam bahasa yang anak guna — BM, English, atau Manglish.
 - Guna slang dan shortform Malaysia secara natural:
-  Â· "je" bukan "sahaja", "nak" bukan "ingin", "dah" bukan "sudah"
-  Â· "la", "lah", "kan", "eh", "ha", "weh" â guna dengan betul mengikut konteks
-  Â· "tak" bukan "tidak", "ni" bukan "ini", "tu" bukan "itu"
-  Â· "buat" bukan "lakukan", "letak" bukan "masukkan", "kacau" untuk stir
-  Â· "api besar / api kecik / api sederhana" â bukan high/medium/low heat
-  Â· "periuk" bukan "pot", "kuali" bukan "pan", "toskan" untuk drain
-  Â· "perap" untuk marinate, "tapis" untuk strain, "hiris" untuk slice, "kisar" untuk blend
-- Boleh guna emoji sesekali â macam ibu WhatsApp betul-betul
+  · "je" bukan "sahaja", "nak" bukan "ingin", "dah" bukan "sudah"
+  · "la", "lah", "kan", "eh", "ha", "weh" — guna dengan betul mengikut konteks
+  · "tak" bukan "tidak", "ni" bukan "ini", "tu" bukan "itu"
+  · "buat" bukan "lakukan", "letak" bukan "masukkan", "kacau" untuk stir
+  · "api besar / api kecik / api sederhana" — bukan high/medium/low heat
+  · "periuk" bukan "pot", "kuali" bukan "pan", "toskan" untuk drain
+  · "perap" untuk marinate, "tapis" untuk strain, "hiris" untuk slice, "kisar" untuk blend
+- Boleh guna emoji sesekali — macam ibu WhatsApp betul-betul
 - Jangan terlalu formal. Ini macam text dengan mak, bukan baca buku resepi.
 
 GAYA MASAKAN AKTIF: {STYLE}
@@ -1079,21 +1068,21 @@ Definisi gaya:
 - global: masakan luar negara dengan bahan ganti tempatan, cadang di mana nak beli
 
 KERJA IBU:
-1. Jawab apa je soalan pasal dapur â teknik, bahan, masa masak, kenapa tak jadi
+1. Jawab apa je soalan pasal dapur — teknik, bahan, masa masak, kenapa tak jadi
 2. Terangkan sains masakan dalam bahasa biasa ("rendang kering sebab api tinggi sangat")
-3. Bagi resepi penuh bila diminta â format jelas dan mudah diikut
+3. Bagi resepi penuh bila diminta — format jelas dan mudah diikut
 4. Kira semula bahan bila anak nak masak untuk ramai orang
 5. Cadang bahan ganti yang boleh dapat kat Giant, Aeon, Mydin, atau kedai runcit biasa
 6. Terangkan beza bahan dalam 2-3 ayat, guna perbandingan yang senang faham
 
 FORMAT RESEPI (bila bagi resepi penuh):
-**[Nama Masakan]** â Gaya [Style] | Untuk [X] orang
+**[Nama Masakan]** — Gaya [Style] | Untuk [X] orang
 
 **Bahan-bahan:**
-- [bahan] â [kuantiti]
+- [bahan] — [kuantiti]
 
 **Cara masak:**
-1. [langkah â satu tindakan satu langkah, jelas dan mudah]
+1. [langkah — satu tindakan satu langkah, jelas dan mudah]
 
 **Tips Ibu:**
 - [1-3 tips praktikal: kesilapan biasa, tanda-tanda dah masak, cara simpan]
@@ -1109,16 +1098,16 @@ HAD IBU:
 - Jangan tiru atau buat-buat jadi mana-mana chef atau orang terkenal sebenar.
 - Jangan bagi panduan yang tak selamat (ayam separuh masak, cara simpan bahan yang salah).`;
 
-  // ââ Config âââââââââââââââââââââââââââââââââââââââââââââââ
+  // ── Config ───────────────────────────────────────────────
   const FREE_MSG_LIMIT = 20;
   const SOFT_NUDGE_AT  = FREE_MSG_LIMIT - 2; // 18
 
-  // ââ Auth State âââââââââââââââââââââââââââââââââââââââââââ
+  // ── Auth State ───────────────────────────────────────────
   let currentUser     = null;
   let userProfile     = null;  // { question_count, is_subscribed, ... }
   let otpEmail        = '';
 
-  // ââ Session State ââââââââââââââââââââââââââââââââââââââââ
+  // ── Session State ────────────────────────────────────────
   let msgCount = parseInt(sessionStorage.getItem('im_count') || '0');
   let currentStyle = 'kampung';
   let conversationHistory = [];
@@ -1127,7 +1116,7 @@ HAD IBU:
 
   function saveCount() { sessionStorage.setItem('im_count', msgCount); }
 
-  // ââ Init: listen for auth changes ââââââââââââââââââââââââ
+  // ── Init: listen for auth changes ────────────────────────
   sb.auth.onAuthStateChange(async (event, session) => {
     if (session?.user) {
       currentUser = session.user;
@@ -1155,7 +1144,7 @@ HAD IBU:
     userProfile = data;
   }
 
-  // ââ Nav update âââââââââââââââââââââââââââââââââââââââââââ
+  // ── Nav update ───────────────────────────────────────────
   function updateNavForUser(user) {
     const email = user.email || '';
     const initial = email.charAt(0).toUpperCase();
@@ -1163,7 +1152,7 @@ HAD IBU:
     document.getElementById('navUserChip').style.display  = 'flex';
     document.getElementById('navUserInitial').textContent = initial;
     document.getElementById('navUserEmail').textContent   = email.length > 20
-      ? email.substring(0, 17) + 'â¦' : email;
+      ? email.substring(0, 17) + '…' : email;
 
     // If user has active subscription, reset any paywall
     if (userProfile?.is_subscribed) {
@@ -1192,16 +1181,36 @@ HAD IBU:
     saveCount();
   }
 
-  // ââ Login Modal ââââââââââââââââââââââââââââââââââââââââââ
+  // ── Login Modal ──────────────────────────────────────────
   function openLoginModal() {
     document.getElementById('loginModal').classList.remove('hidden');
     document.getElementById('modalStep1').style.display = 'block';
     document.getElementById('modalStep2').style.display = 'none';
-    document.getElementById('loginEmail')/ah ya nak.', 'error'); return;
+    document.getElementById('loginEmail').value = '';
+    document.getElementById('loginOtp').value = '';
+    hideModalMsg();
+    setTimeout(() => document.getElementById('loginEmail').focus(), 100);
+  }
+
+  function closeLoginModal() {
+    document.getElementById('loginModal').classList.add('hidden');
+  }
+
+  function hideModalMsg() {
+    document.getElementById('modalMsg1').className = 'modal-msg';
+    document.getElementById('modalMsg1').textContent = '';
+    document.getElementById('modalMsg2').className = 'modal-msg';
+    document.getElementById('modalMsg2').textContent = '';
+  }
+
+  async function sendOTP() {
+    const email = document.getElementById('loginEmail').value.trim();
+    if (!email || !email.includes('@')) {
+      showMsg('modalMsg1', 'Sila masukkan alamat emel yang sah ya nak.', 'error'); return;
     }
     const btn = document.getElementById('sendOtpBtn');
     btn.disabled = true;
-    btn.textContent = 'Menghantarâ¦';
+    btn.textContent = 'Menghantar…';
 
     const { error } = await sb.auth.signInWithOtp({
       email,
@@ -1209,7 +1218,7 @@ HAD IBU:
     });
 
     btn.disabled = false;
-    btn.textContent = 'Hantar Kod â';
+    btn.textContent = 'Hantar Kod →';
 
     if (error) {
       showMsg('modalMsg1', 'Alamak, ada masalah. Cuba semula ya: ' + error.message, 'error');
@@ -1231,7 +1240,7 @@ HAD IBU:
     }
     const btn = document.getElementById('verifyOtpBtn');
     btn.disabled = true;
-    btn.textContent = 'Menyemakâ¦';
+    btn.textContent = 'Menyemak…';
 
     const { data, error } = await sb.auth.verifyOtp({
       email: otpEmail,
@@ -1240,14 +1249,14 @@ HAD IBU:
     });
 
     btn.disabled = false;
-    btn.textContent = 'Sahkan Kod â';
+    btn.textContent = 'Sahkan Kod ✓';
 
     if (error) {
       showMsg('modalMsg2', 'Kod salah atau dah tamat. Cuba semula ya: ' + error.message, 'error');
       return;
     }
 
-    showMsg('modalMsg2', 'Berjaya! Selamat datang anak ð', 'success');
+    showMsg('modalMsg2', 'Berjaya! Selamat datang anak 🎉', 'success');
     setTimeout(() => {
       closeLoginModal();
       // If they were blocked by paywall, check subscription now
@@ -1272,11 +1281,11 @@ HAD IBU:
   async function handleAfterLogin() {
     await loadUserProfile();
     if (userProfile?.is_subscribed) {
-      // Already subscribed â remove paywall
+      // Already subscribed — remove paywall
       hidePaywall();
-      addMessage('assistant', 'Alhamdulillah, anak dah log masuk! Ibu sedia nak sambung jawab soalan ya ð', true);
+      addMessage('assistant', 'Alhamdulillah, anak dah log masuk! Ibu sedia nak sambung jawab soalan ya 😊', true);
     } else {
-      // Logged in but not subscribed â show payment option
+      // Logged in but not subscribed — show payment option
       updatePaywallToPayment();
     }
   }
@@ -1285,18 +1294,18 @@ HAD IBU:
     const overlay = document.getElementById('paywallOverlay');
     if (!overlay) return;
     overlay.innerHTML = `
-      <h4>Dah log masuk! Langgan sekarang ð</h4>
-      <p>Hanya <strong>RM1 sebulan</strong> â murah dari santan sekotak. Tanya Ibu tanpa had.</p>
+      <h4>Dah log masuk! Langgan sekarang 😊</h4>
+      <p>Hanya <strong>RM1 sebulan</strong> — murah dari santan sekotak. Tanya Ibu tanpa had.</p>
       <div class="paywall-btn-row">
         <button class="unlock-btn" onclick="goToPayment()">
-          Bayar RM1 Sekarang â¦
+          Bayar RM1 Sekarang ✦
         </button>
       </div>
-      <span class="skip-link" onclick="grantExtraMessages()">Nak cuba 5 soalan lagi dulu â</span>
+      <span class="skip-link" onclick="grantExtraMessages()">Nak cuba 5 soalan lagi dulu →</span>
     `;
   }
 
-  // ââ Style controls âââââââââââââââââââââââââââââââââââââââ
+  // ── Style controls ───────────────────────────────────────
   function setStyle(el, style) {
     document.querySelectorAll('.style-chip').forEach(c => c.classList.remove('active'));
     el.classList.add('active');
@@ -1308,7 +1317,7 @@ HAD IBU:
     el.classList.add('active');
   }
 
-  // ââ Navigation âââââââââââââââââââââââââââââââââââââââââââ
+  // ── Navigation ───────────────────────────────────────────
   function scrollToChat() {
     document.getElementById('chat-section').scrollIntoView({behavior:'smooth'});
     setTimeout(() => document.getElementById('chatInput').focus(), 600);
@@ -1326,7 +1335,7 @@ HAD IBU:
     }, 700);
   }
 
-  // ââ Message rendering ââââââââââââââââââââââââââââââââââââ
+  // ── Message rendering ────────────────────────────────────
   function addMessage(role, content, isHTML=false) {
     const msgs = document.getElementById('chatMessages');
     const div  = document.createElement('div');
@@ -1367,10 +1376,10 @@ HAD IBU:
       .replace(/\n/g, '<br>')
       .replace(/Tips Ibu:|Tips ibu:/gi,
         '<div class="tip-box"><strong>Tips Ibu:</strong></div>')
-      .replace(/(\*\s.*?)(?=<br>|$)/g, 'â¢ $1');
+      .replace(/(\*\s.*?)(?=<br>|$)/g, '• $1');
   }
 
-  // ââ Paywall ââââââââââââââââââââââââââââââââââââââââââââââ
+  // ── Paywall ──────────────────────────────────────────────
   function showPaywallInChat() {
     if (paywallShown) return;
     paywallShown = true;
@@ -1383,25 +1392,25 @@ HAD IBU:
     overlay.id = 'paywallOverlay';
 
     if (currentUser) {
-      // Logged in but not subscribed â go straight to payment
+      // Logged in but not subscribed → go straight to payment
       overlay.innerHTML = `
-        <h4>Anak nak terus tanya Ibu? ð</h4>
-        <p>20 soalan percuma dah habis. Langgan <strong>RM1 sebulan</strong> untuk tanya tanpa had â murah dari beli santan sekotak.</p>
+        <h4>Anak nak terus tanya Ibu? 😊</h4>
+        <p>20 soalan percuma dah habis. Langgan <strong>RM1 sebulan</strong> untuk tanya tanpa had — murah dari beli santan sekotak.</p>
         <div class="paywall-btn-row">
-          <button class="unlock-btn" onclick="goToPayment()">Bayar RM1 Sekarang â¦</button>
+          <button class="unlock-btn" onclick="goToPayment()">Bayar RM1 Sekarang ✦</button>
         </div>
-        <span class="skip-link" onclick="grantExtraMessages()">Nak cuba 5 soalan lagi dulu â</span>
+        <span class="skip-link" onclick="grantExtraMessages()">Nak cuba 5 soalan lagi dulu →</span>
       `;
     } else {
-      // Not logged in â ask to log in first
+      // Not logged in → ask to log in first
       overlay.innerHTML = `
-        <h4>Anak nak terus tanya Ibu? ð</h4>
-        <p>20 soalan percuma dah habis. Log masuk dulu â lepas tu langgan <strong>RM1 sebulan</strong> untuk tanya tanpa had.</p>
+        <h4>Anak nak terus tanya Ibu? 😊</h4>
+        <p>20 soalan percuma dah habis. Log masuk dulu — lepas tu langgan <strong>RM1 sebulan</strong> untuk tanya tanpa had.</p>
         <div class="paywall-btn-row">
-          <button class="login-btn" onclick="openLoginModal()">ð Log Masuk</button>
-          <button class="unlock-btn" onclick="openLoginModal()">Langgan RM1/bulan â¦</button>
+          <button class="login-btn" onclick="openLoginModal()">🔑 Log Masuk</button>
+          <button class="unlock-btn" onclick="openLoginModal()">Langgan RM1/bulan ✦</button>
         </div>
-        <span class="skip-link" onclick="grantExtraMessages()">Nak cuba 5 soalan lagi dulu â</span>
+        <span class="skip-link" onclick="grantExtraMessages()">Nak cuba 5 soalan lagi dulu →</span>
       `;
     }
 
@@ -1428,11 +1437,11 @@ HAD IBU:
     window.open(TOYYIBPAY_URL, '_blank');
   }
 
-  // ââ Build system prompt ââââââââââââââââââââââââââââââââââ
+  // ── Build system prompt ──────────────────────────────────
   function buildSystemPrompt() {
     let extra = '';
     if (!isSubscribed() && msgCount >= SOFT_NUDGE_AT) {
-      extra = `\n\nSPECIAL INSTRUCTION FOR THIS REPLY ONLY: At the very end of your response, tambah satu ayat pendek yang natural dan mesra â sebut yang Ibumasak ada langganan RM1 sebulan untuk tanya tanpa had. Buatkan macam Ibu sendiri yang sebut secara casual, bukan macam iklan. Contoh: "Oh ya nak, kalau nak tanya Ibu lebih banyak lagi, ada langganan RM1 je sebulan â murah je kan?"`;
+      extra = `\n\nSPECIAL INSTRUCTION FOR THIS REPLY ONLY: At the very end of your response, tambah satu ayat pendek yang natural dan mesra — sebut yang Ibumasak ada langganan RM1 sebulan untuk tanya tanpa had. Buatkan macam Ibu sendiri yang sebut secara casual, bukan macam iklan. Contoh: "Oh ya nak, kalau nak tanya Ibu lebih banyak lagi, ada langganan RM1 je sebulan — murah je kan?"`;
     }
     return SYSTEM_PROMPT.replace('{STYLE}', currentStyle) + extra;
   }
@@ -1447,7 +1456,7 @@ HAD IBU:
     return true;
   }
 
-  // ââ Save chat log to Supabase ââââââââââââââââââââââââââââ
+  // ── Save chat log to Supabase ────────────────────────────
   async function saveChatLog(userMsg, ibuReply) {
     if (!currentUser) return;
     try {
@@ -1457,10 +1466,10 @@ HAD IBU:
         ibu_reply: ibuReply,
         style: currentStyle
       });
-    } catch(e) { /* silent fail â chat continues */ }
+    } catch(e) { /* silent fail — chat continues */ }
   }
 
-  // ââ Increment question count in Supabase âââââââââââââââââ
+  // ── Increment question count in Supabase ─────────────────
   async function incrementQuestionCount() {
     if (!currentUser) return;
     try {
@@ -1471,7 +1480,7 @@ HAD IBU:
     } catch(e) { /* silent fail */ }
   }
 
-  // ââ Main send ââââââââââââââââââââââââââââââââââââââââââââ
+  // ── Main send ────────────────────────────────────────────
   async function sendMessage() {
     const input   = document.getElementById('chatInput');
     const sendBtn = document.getElementById('sendBtn');
@@ -1480,7 +1489,7 @@ HAD IBU:
 
     // If subscribed, allow unlimited
     if (isSubscribed()) {
-      // fall through â no limit
+      // fall through — no limit
     } else if (msgCount >= FREE_MSG_LIMIT) {
       showPaywallInChat();
       return;
@@ -1527,7 +1536,7 @@ HAD IBU:
 
     } catch(e) {
       removeTyping();
-      addMessage('assistant', 'Alamak, Ibu ada masalah teknikal sekejap. Cuba tanya balik ya nak! ð', true);
+      addMessage('assistant', 'Alamak, Ibu ada masalah teknikal sekejap. Cuba tanya balik ya nak! 😅', true);
     }
 
     isTyping = false;
@@ -1535,18 +1544,18 @@ HAD IBU:
     document.getElementById('chatMessages').scrollTop = 9999;
   }
 
-  // ââ Close modal on backdrop click ââââââââââââââââââââââââ
+  // ── Close modal on backdrop click ────────────────────────
   document.getElementById('loginModal').addEventListener('click', function(e) {
     if (e.target === this) closeLoginModal();
   });
 
-  // ââ Scroll animations ââââââââââââââââââââââââââââââââââââ
+  // ── Scroll animations ────────────────────────────────────
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // ââ Boot: show nav login button for guests ââââââââââââââââ
+  // ── Boot: show nav login button for guests ────────────────
   // (onAuthStateChange handles the rest)
   updateNavForGuest();
 </script>
